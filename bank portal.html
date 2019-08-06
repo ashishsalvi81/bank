@@ -1,0 +1,110 @@
+<html>
+<head>
+  <title> welcome </title>
+<script lang="javascript">
+function reg()
+{
+
+f1.t4.value=f1.t1.value;
+f1.t7.value=f1.t2.value;
+f1.t6.value=f1.t3.value;
+
+if(f1.s1.value=="c")
+{
+f1.t5.value="current";
+}
+else if(f1.s1.value=="s")
+{
+f1.t5.value="saving";
+}
+}
+function dep()
+{
+if(parseInt(f1.t8.value)<=10000)
+{
+f1.t7.value=parseInt(f1.t8.value)+parseInt(f1.t7.value);
+f1.t8.value="";
+}
+else{
+alert("amount must be less than 10000");
+}
+}    
+function wit()
+{
+if(parseInt(f1.t8.value)<=parseInt(f1.t7.value))
+{
+f1.t7.value=parseInt(f1.t7.value)-parseInt(f1.t8.value);
+f1.t8.value="";
+}
+else
+{
+alert("you have insufficient amount");
+}
+
+}
+</script>
+</head>
+<body style="background-image: url(ashish2.jpg);background-size: inherit;">
+<center>
+<p><font color="blue" size="18" face="arial" >welcome to the SBI bank</font></p>
+<hr>
+ <fieldset style="width:40%">
+  <legend><font color="red" size="18">bank portal</legend>
+  <form name="f1">
+      <table border="1" align="center">
+	     <tr>
+	        <td> enter account holder name  </td>
+		    <td> <input type="text" name="t1" > </td>
+	     </tr>
+		 <tr>
+		     <td> select account type </td>
+			 <td> <select name="s1">
+                  <option> select </option>
+                  <option value="c">current</option>
+                  <option value="s">saving</option></select> 			 </td>
+		 </tr>
+		 <tr>
+		     <td> enter Initial amouunt </td>
+			 <td> <input type="text" name="t2"> </td>
+		 </tr>
+		 <tr>
+		     <td> enter account number </td>
+			 <td> <input type="text" name="t3"> </td>
+		 </tr>
+		 <tr>
+		     <td align="center" colspan="2" > <input type="button" value="register" onclick="reg()"> </td>
+		 </tr>
+	 </table>
+	 <table border="1" align="center">
+		<tr>
+		     <td> welcome </td>
+			 <td> <input type="text" name="t4"> </td>
+		</tr>
+		<tr>
+		      <td> your account type </td>
+			  <td> <input type="text" name="t5"> </td>
+		</tr>
+		<tr>
+		      <td> account number </td>
+			  <td> <input type="text" name="t6"> </td>
+		</tr> 
+	
+		<tr>
+		      <td> current amount </td>
+			  <td> <input type="text" name="t7"> </td>
+		</tr>
+		<tr>
+		      <td> enter amount </td>
+			  <td> <input type="text" name="t8"> </td>
+		</tr>
+		<tr>
+		      <td align="center"> <input type="button" value="deposite" onclick="dep()"> </td>
+			  <td align="center"> <input type="button" value="withdrow" onclick="wit()"> </td>
+		</tr>
+		
+        </table>		
+	</form>
+ </fieldset>
+</center> 
+</body>
+</html>
